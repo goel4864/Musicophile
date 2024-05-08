@@ -1,0 +1,142 @@
+==195025== Memcheck, a memory error detector
+==195025== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==195025== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==195025== Command: ./musicServer
+==195025== 
+--195025-- Valgrind options:
+--195025--    --leak-check=yes
+--195025--    --tool=memcheck
+--195025--    -s
+--195025--    -v
+--195025-- Contents of /proc/version:
+--195025--   Linux version 6.5.0-28-generic (buildd@lcy02-amd64-098) (x86_64-linux-gnu-gcc-12 (Ubuntu 12.3.0-1ubuntu1~22.04) 12.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #29~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  4 14:39:20 UTC 2
+--195025-- 
+--195025-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--195025-- Page sizes: currently 4096, max supported 4096
+--195025-- Valgrind library directory: /usr/libexec/valgrind
+--195025-- Reading syms from /home/skywalker/Documents/Report_Project/build/musicServer
+--195025-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--195025--   Considering /usr/lib/debug/.build-id/24/6ac0d8deba5a40c63e9a1a87d4d779d8eb589f.debug ..
+--195025--   .. build-id is valid
+--195025-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--195025--    object doesn't have a symbol table
+--195025--    object doesn't have a dynamic symbol table
+--195025-- Scheduler: using generic scheduler lock implementation.
+--195025-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==195025== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-195025-by-skywalker-on-???
+==195025== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-195025-by-skywalker-on-???
+==195025== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-195025-by-skywalker-on-???
+==195025== 
+==195025== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==195025== don't want to do, unless you know exactly what you're doing,
+==195025== or are doing some strange experiment):
+==195025==   /usr/bin/vgdb --pid=195025 ...command...
+==195025== 
+==195025== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==195025==   /path/to/gdb ./musicServer
+==195025== and then give GDB the following command
+==195025==   target remote | /usr/bin/vgdb --pid=195025
+==195025== --pid is optional if only one valgrind process is running
+==195025== 
+--195025-- REDIR: 0x402aa40 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--195025-- REDIR: 0x402a810 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--195025-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--195025--    object doesn't have a symbol table
+--195025-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--195025--    object doesn't have a symbol table
+==195025== WARNING: new redirection conflicts with existing -- ignoring it
+--195025--     old: 0x0402aa40 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--195025--     new: 0x0402aa40 (strlen              ) R-> (2007.0) 0x0484ee30 strlen
+--195025-- REDIR: 0x4027220 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484fcd0 (strcmp)
+--195025-- REDIR: 0x402afa0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853840 (mempcpy)
+--195025-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+--195025--    object doesn't have a symbol table
+--195025-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--195025--    object doesn't have a symbol table
+--195025-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--195025--   Considering /usr/lib/debug/.build-id/96/2015aa9d133c6cbcfb31ec300596d7f44d3348.debug ..
+--195025--   .. build-id is valid
+==195025== WARNING: new redirection conflicts with existing -- ignoring it
+--195025--     old: 0x04b5ec60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--195025--     new: 0x04b5ec60 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==195025== WARNING: new redirection conflicts with existing -- ignoring it
+--195025--     old: 0x04b5ec60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--195025--     new: 0x04b5ec60 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+==195025== WARNING: new redirection conflicts with existing -- ignoring it
+--195025--     old: 0x04b5ec60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--195025--     new: 0x04b5ec60 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==195025== WARNING: new redirection conflicts with existing -- ignoring it
+--195025--     old: 0x04b5ec60 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--195025--     new: 0x04b5ec60 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+--195025-- Reading syms from /usr/lib/x86_64-linux-gnu/libm.so.6
+--195025--   Considering /usr/lib/debug/.build-id/b5/5ba6d8b5954b479fab2a69a54b9f56451fbee0.debug ..
+--195025--   .. build-id is valid
+--195025-- REDIR: 0x4b61720 (libc.so.6:strnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b619e0 (libc.so.6:strpbrk) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b612e0 (libc.so.6:strcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b7fcd0 (libc.so.6:wcsnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b626d0 (libc.so.6:memset) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b7e540 (libc.so.6:wcslen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62c10 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b7e370 (libc.so.6:wcschr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61260 (libc.so.6:index) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61960 (libc.so.6:rindex) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b625a0 (libc.so.6:memmove) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+==195025== Preferring higher priority redirection:
+--195025--     old: 0x04c597c0 (__memcpy_avx_unalign) R-> (2018.0) 0x04850f90 __memcpy_avx_unaligned_erms
+--195025--     new: 0x04c597c0 (__memcpy_avx_unalign) R-> (2018.1) 0x04852880 memmove
+--195025-- REDIR: 0x4b7e3f0 (libc.so.6:wcscmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b629e0 (libc.so.6:stpncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b7e9b0 (libc.so.6:wmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61830 (libc.so.6:strncmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62a70 (libc.so.6:strcasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61420 (libc.so.6:strcspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b7e470 (libc.so.6:wcscpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b611d0 (libc.so.6:strcat) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62b60 (libc.so.6:strncasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62480 (libc.so.6:bcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b6a570 (libc.so.6:memrchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b64010 (libc.so.6:strchrnul) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61390 (libc.so.6:strcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62b10 (libc.so.6:strcasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b616a0 (libc.so.6:strlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b618d0 (libc.so.6:strncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62950 (libc.so.6:stpcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b623f0 (libc.so.6:memchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b61b00 (libc.so.6:strspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b627d0 (libc.so.6:mempcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b62ac0 (libc.so.6:strncasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4b63f80 (libc.so.6:rawmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--195025-- REDIR: 0x4c56610 (libc.so.6:__strrchr_avx2) redirected to 0x484e810 (rindex)
+--195025-- REDIR: 0x4b5e0a0 (libc.so.6:malloc) redirected to 0x4848820 (malloc)
+--195025-- REDIR: 0x4c567e0 (libc.so.6:__strlen_avx2) redirected to 0x484ed10 (strlen)
+--195025-- REDIR: 0x4c52a80 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4852010 (bcmp)
+--195025-- REDIR: 0x4c59780 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4853440 (mempcpy)
+Waiting for clients to join on port 8070... (serverSocket: 3)
+Client 1 joined at socket: 4
+--195025-- REDIR: 0x491b970 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4848fa0 (operator new(unsigned long))
+--195025-- REDIR: 0x4b5f520 (libc.so.6:calloc) redirected to 0x484d9d0 (calloc)
+--195025-- REDIR: 0x491b9d0 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x484a280 (operator new[](unsigned long))
+--195025-- REDIR: 0x4c597c0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4852880 (memmove)
+Song request received
+Song Name is track1.wav
+--195025-- REDIR: 0x4919c40 (libstdc++.so.6:operator delete[](void*)) redirected to 0x484ca20 (operator delete[](void*))
+--195025-- REDIR: 0x4b61fc0 (libc.so.6:__GI_strstr) redirected to 0x4853ae0 (__strstr_sse2)
+Sending music...
+--195025-- REDIR: 0x4c59f80 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4852770 (memset)
+music size packet sent
+--195025-- REDIR: 0x4b5e3e0 (libc.so.6:free) redirected to 0x484b210 (free)
+music file size : 54694118Sent 54694118Amount of data in 227030nr of packets, whole file sent
+--195025-- REDIR: 0x4919c10 (libstdc++.so.6:operator delete(void*)) redirected to 0x484b840 (operator delete(void*))
+Client sent end of session packet
+--195025-- REDIR: 0x4919c20 (libstdc++.so.6:operator delete(void*, unsigned long)) redirected to 0x484bb00 (operator delete(void*, unsigned long))
+Server ended.
+==195025== 
+==195025== HEAP SUMMARY:
+==195025==     in use at exit: 0 bytes in 0 blocks
+==195025==   total heap usage: 8 allocs, 8 frees, 85,896 bytes allocated
+==195025== 
+==195025== All heap blocks were freed -- no leaks are possible
+==195025== 
+==195025== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
